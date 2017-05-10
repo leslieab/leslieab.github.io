@@ -1,5 +1,84 @@
+<template>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+  .bounding-box {
+      outline: 1px solid rgba(63, 169, 245, 1.0);
+    }
+    
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      padding: .25em .25em .25em .25em;
+    }
+    
+    .control {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    
+    button {
+      width: 100%;
+      border-radius: 0px;
+      border: 2px solid #a6a6a6; 
+      box-shadow: inset 0px 0px 0px 1px #fff;
+      background: #a6a6a6;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1em;
+      padding: 0;
+      margin: 0;
+      display: block;
+      overflow: hidden;
+    }
+    
+    button:hover {
+      border: 2px solid #ffbb00;
+    }
+    
+    button:active {
+      background: #ffbb00;
+      border: 2px solid #a6a6a6;
+    }
+    
+    button:focus {
+      outline: 0;
+    }
+  </style>
+  <div class="bounding-box">
+    <div class="wrapper">
+      <div class="control">
+        <button>Button</button>
+      </div>
+    </div>
+  </div>
+
+</template>
+
+<script>
+  // Grab our template full of slider markup and styles
+  var tmpl = document.querySelector('template');
+
+  // Create a prototype for a new element that extends HTMLElement
+  var ImgSliderProto = Object.create(HTMLElement.prototype);
+
+  // Setup our Shadow DOM and clone the template
+  ImgSliderProto.createdCallback = function() {
+    var root = this.createShadowRoot();
+    root.appendChild(document.importNode(tmpl.content, true));
+  };
+
+  // Register our new element
+  var ImgSlider = document.registerElement('img-slider', {
+    prototype: ImgSliderProto
+  });
+</script>
+
 <img-slider>
 
 </img-slider>
-
-  
