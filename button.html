@@ -1,4 +1,8 @@
-<template>
+<script src="https://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="https://docs-05-dot-polymer-project.appspot.com/0.5/components/core-ajax/core-ajax.html">
+
+<polymer-element name="img-slider" noscript>
+  <template>
   <style>
     * {
       -webkit-box-sizing: border-box;
@@ -59,25 +63,8 @@
   </div>
 
 </template>
+  </polymer-element>
 
-<script>
-  // Grab our template full of slider markup and styles
-  var tmpl = document.querySelector('template');
-
-  // Create a prototype for a new element that extends HTMLElement
-  var ImgSliderProto = Object.create(HTMLElement.prototype);
-
-  // Setup our Shadow DOM and clone the template
-  ImgSliderProto.createdCallback = function() {
-    var root = this.createShadowRoot();
-    root.appendChild(document.importNode(tmpl.content, true));
-  };
-
-  // Register our new element
-  var ImgSlider = document.registerElement('img-slider', {
-    prototype: ImgSliderProto
-  });
-</script>
 
 <img-slider>
 
