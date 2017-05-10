@@ -4,6 +4,33 @@
 <polymer-element name="img-slider" noscript>
 <template>
   <style>
+    button {
+      width: 100%;
+      border-radius: 0px;
+      border: 2px solid #a6a6a6; 
+      box-shadow: inset 0px 0px 0px 1px #fff;
+      background: #a6a6a6;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1em;
+      padding: 0;
+      margin: 0;
+      display: block;
+      overflow: hidden;
+    }
+    
+    button:hover {
+      border: 2px solid #ffbb00;
+    }
+    
+    button:active {
+      background: #ffbb00;
+      border: 2px solid #a6a6a6;
+    }
+    
+    button:focus {
+      outline: 0;
+    }
   </style>
   
  <button>Button</button>
