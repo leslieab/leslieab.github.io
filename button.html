@@ -5,9 +5,14 @@
 <template>
   <style>
     
+    .bounding-box {
+      outline: 1px solid rgba(63, 169, 245, 1.0);
+    }
+    
     .wrapper {
       height: 100%;
       width: 100%;
+      padding: .25em .25em .25em .25em;
     }
     
     .control {
@@ -44,10 +49,12 @@
       outline: 0;
     }
   </style>
-  
-<div class="wrapper">
-    <div class="control">
-      <button>Button</button>
+ 
+  <div class="bounding-box">
+    <div class="wrapper">
+      <div class="control">
+        <button>Button</button>
+      </div>
     </div>
   </div>
 
