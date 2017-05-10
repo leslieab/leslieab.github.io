@@ -1,168 +1,31 @@
+<script src="https://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="https://docs-05-dot-polymer-project.appspot.com/0.5/components/core-ajax/core-ajax.html">
 
-<template id="hamburger-menu-template">
-  <style>
-   .hamburger-button {
-      position: absolute;
-      left: 5px;
-      top: 5px;
-      z-index: 101;
-      padding: 2px;
-      width: 32px;
-      height: 32px;
-      -webkit-border-radius: 5px;
-      -webkit-background-clip: padding-box;
-      -moz-border-radius: 5px;
-      -moz-background-clip: padding;
-      border-radius: 5px;
-      background-clip: padding-box;
+<polymer-element name="canvas-container" noscript>
+  <template>
+    <style>
+        * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      box-sizing: border-box;
     }
-    .hamburger-button:hover .hamburger-line {
-      background-color: #2b134a;
-    }
-    .hamburger-button .hamburger-line {
-      pointer-events: none;
-      -webkit-border-radius: 2px;
-      -webkit-background-clip: padding-box;
-      -moz-border-radius: 2px;
-      -moz-background-clip: padding;
-      border-radius: 2px;
-      background-clip: padding-box;
-      background-color: #400090;
-      height: 4px;
-      width: 80%;
-      margin: 16% 10%;
-    }
-    .hamburger-flyout {
-      position: absolute;
-      -webkit-transition: left 0.3s;
-      /* For Safari 3.1 to 6.0 */
-      transition: left 0.3s;
-      top: 0px;
-      left: -200px;
-      bottom: 0px;
-      width: 200px;
-      z-index: 100;
-      overflow: hidden;
-      background: #400090;
-      -webkit-box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-      -moz-box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-      box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-    }
-    .hamburger-flyout .hamburger-menu-title {
-      color: #fff;
-      font-size: 24px;
-      margin-top: 13px;
-      margin-bottom: 15px;
-      margin-left: 5px;
-      margin-right: 10px;
-      padding-left: 47px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #fff;
-    }
-    .hamburger-flyout .hamburger-menu-item {
-      color: #ddd;
-      padding: 15px 10px;
-      display: block;
-      text-decoration: none;
-    }
-    :host(.open) .hamburger-button .hamburger-line{
-      background-color: #fff;
-    }
-    :host(.open) .hamburger-flyout{
-      left: 0;
-    }
-    ::content hb-menu-item {
-      background-color: red !important;  
-    }
-  </style>
-  <div class="hamburger-button">
-    <div class="hamburger-line"></div>
-    <div class="hamburger-line"></div>
-    <div class="hamburger-line"></div>
-  </div>
+      
+      main {
+  background: #f1f1f1;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+    </style>
+    
+    <main>
+      
+    </main>
+    
+    </template>
+  </polymer-element>
 
-  <div class="hamburger-flyout">
-      <div class="hamburger-menu-title">
-        MENU TITLE
-      </div>
-      <content></content>
-     
-  </div>
-</template>
-
-<template id="hb-menu-item-template">
-  <style>
-  .hamburger-menu-item-caption {
-    font-size: 0.7em;
-    color: #777777;
-  }
-  a {
-     color: #ddd;
-      padding: 15px 10px;
-      display: block;
-      text-decoration: none;
-  }
-  a:hover {
-    -webkit-transition: background-color 0.2s;
-    /* For Safari 3.1 to 6.0 */
-    transition: background-color 0.2s;
-    background-color: #2b134a;
-    -webkit-box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-    box-shadow: inset -10px 0px 5px -5px rgba(0, 0, 0, 0.4);
-  }
-  </style>
-  <a href="#abc">
-    <content></content>
-    <div class="hamburger-menu-item-caption"></div>
-  </a>
-</template>
-
-
-<script type="text/javascript">
-  (function () {
-  'use strict';
+<canvas-container>
   
-  var importContent = document
-    .querySelector('link[rel="import"]')
-    .import;
-
-  // Our templates
-  var hamburgerMenuTmpl = importContent.querySelector('#hamburger-menu-template');
-  var hamburgerMenuItemTmpl = importContent.querySelector('#hb-menu-item-template');
-  
-  // Register the menu
-  document.registerElement('hamburger-menu', {
-    prototype: Object.create(HTMLElement.prototype, {
-      createdCallback: {
-        value: function () {
-          // Install the template onto the shadow root
-          var content = document.importNode(hamburgerMenuTmpl.content, true);
-          this.rootElem = this.createShadowRoot();
-          this.rootElem.appendChild(content);
-          
-          // Listen to the hamburger button for clicks
-          this.buttonClickListener = function (evt) {
-            let menuCssClass = this.getAttribute('class') || "";
-            this.setAttribute('class', menuCssClass.indexOf('open') >= 0 ? menuCssClass.replace('open', '') : (menuCssClass + ' open'));
-          }.bind(this);
-          
-          // Hook up click listener
-          this.rootElem.querySelector('.hamburger-button').addEventListener('click', this.buttonClickListener);
-          // Set title
-          this.rootElem.querySelector('.hamburger-flyout .hamburger-menu-title').innerHTML = this.title;
-        }
-      }
-    })
-  });
-
-
-}());
-</script>
-
-<hamburger-menu title="My Example Menu">
-
-</hamburger-menu>
-
-
-hi3
+  </canvas-container>
