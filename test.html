@@ -62,13 +62,28 @@
       border: 2px solid #aeaeae; 
       box-shadow: inset 0px 0px 0px 1px #fff;
       background: #aeaeae;
-}
+    }
+    
+    .cut-out {
+      position: absolute;
+      width: calc(100% - 50px);
+      height: calc(100% - 50px);
+      background-color: #ffffff;
+      border: 1px solid #ffffff; 
+      box-shadow: inset 0px 0px 0px 3px #aeaeae;
+      border-radius: 100%;
+      left: calc(50% - 48px);
+      top: calc(50% - 48px);
+      z-index: 10;
+    }
   </style>
     <div class="wrapper">
       <div class="control">
         <button>Button</button>
         
-        <div class="gauge">gauge</div>
+        <div class="gauge">
+          <div class="cut-out"></div>
+          gauge</div>
       </div>
     </div>
 
