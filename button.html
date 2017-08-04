@@ -64,6 +64,50 @@
 </template>
   </polymer-element>
 
+
+<polymer-element name="gauge" noscript>
+  <template>
+  <style>
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0.25em;
+}
+
+.control {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.gauge {
+  position: relative;
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid #aeaeae; 
+  box-shadow: inset 0px 0px 0px 1px #fff;
+  background: #aeaeae;
+}
+  </style>
+    <div class="wrapper">
+  <div class="control">
+    <div class="gauge">
+      hi
+    </div>
+  </div>
+</div>
+
+</template>
+  </polymer-element>
+
+
 <polymer-element name="led-button" noscript>
   <template>
   <style>
@@ -133,3 +177,7 @@
 <led-button>
 
 </led-button>
+
+<gauge>
+
+</gauge>
