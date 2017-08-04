@@ -26,9 +26,9 @@
     
     .gauge {
       position: relative;
+      border-radius: 100%;
       width: 100%;
       padding-top: 100%;
-      border-radius: 100%;
       border: 2px solid #aeaeae; 
       box-shadow: inset 0px 0px 0px 1px #fff;
       background: #aeaeae;
@@ -56,8 +56,20 @@
       transform: rotate(-18deg); 
     }
     
+    .cut-out {
+      position: absolute;
+      width: calc(100% - 50px);
+      height: calc(100% - 50px);
+      background-color: #ffffff;
+      border: 1px solid #ffffff; 
+      box-shadow: inset 0px 0px 0px 3px #aeaeae;
+      border-radius: 100%;
+      left: 24px;
+      top: 24px;
+      z-index: 10;
+    }
+    
     .ticks {
-      content: "";
       position: absolute;
       top:50%;
       left:0;
@@ -89,19 +101,6 @@
       transform: rotate(-36deg);
     }
     
-    .cut-out {
-      position: absolute;
-      width: calc(100% - 50px);
-      height: calc(100% - 50px);
-      background-color: #ffffff;
-      border: 1px solid #ffffff; 
-      box-shadow: inset 0px 0px 0px 3px #aeaeae;
-      border-radius: 100%;
-      left: 24px;
-      top: 24px;
-      z-index: 10;
-    }
-    
     input:focus {
       outline: 0;
     }
@@ -127,8 +126,6 @@
       z-index: 999;
       text-align: center;
     }
-    
-    
   </style>
     <div class="wrapper">
       <div class="control">
