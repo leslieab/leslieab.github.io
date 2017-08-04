@@ -64,6 +64,28 @@
       background: #aeaeae;
     }
     
+    .gauge::before {
+      content: "";
+      position: absolute;
+      top:50%;
+      left:0;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      transform: rotate(18deg);
+    }
+    
+    .gauge::after {
+      content: "";
+      position: absolute;
+      top:50%;
+      left:0;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      transform: rotate(-18deg); 
+    }
+    
     .cut-out {
       position: absolute;
       width: calc(100% - 50px);
