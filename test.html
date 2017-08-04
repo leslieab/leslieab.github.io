@@ -1,48 +1,120 @@
+<script src="https://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
+<link rel="import" href="https://docs-05-dot-polymer-project.appspot.com/0.5/components/core-ajax/core-ajax.html">
 
+<polymer-element name="text-button" noscript>
   <template>
-    <style>
-        * {
+  <style>
+    * {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
       box-sizing: border-box;
     }
-      
-      main {
-  background: #f1f1f1;
-  display: block;
-  height: 100vh;
-  width: 100vw;
+ 
+    
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      padding: .25em .25em .25em .25em;
+    }
+    
+    .control {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
+    
+    button {
+      width: 100%;
+      border-radius: 0px;
+      border: 2px solid #a6a6a6; 
+      box-shadow: inset 0px 0px 0px 1px #fff;
+      background: #a6a6a6;
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1em;
+      padding: 0.25em;
+      margin: 0;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    button:hover {
+      border: 2px solid #ffbb00;
+    }
+    
+    button:active {
+      background: #ffbb00;
+      border: 2px solid #a6a6a6;
+    }
+    
+    button:focus {
+      outline: 0;
+    }
+  </style>
+    <div class="wrapper">
+      <div class="control">
+        <button>Button</button>
+      </div>
+    </div>
+
+</template>
+  </polymer-element>
+
+
+<polymer-element name="gauge" noscript>
+  <template>
+  <style>
+   * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
-    </style>
-    
-    <main>
-      
-    </main>
-    
-    </template>
 
-  <script>
-  // Grab our template full of slider markup and styles
-  var tmpl = document.querySelector('template');
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0.25em;
+}
 
-  // Create a prototype for a new element that extends HTMLElement
-  var ImgSliderProto = Object.create(HTMLElement.prototype);
+.control {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
 
-  // Setup our Shadow DOM and clone the template
-  ImgSliderProto.createdCallback = function() {
-    var root = this.createShadowRoot();
-    root.appendChild(document.importNode(tmpl.content, true));
-  };
+.gauge {
+  position: relative;
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid #aeaeae; 
+  box-shadow: inset 0px 0px 0px 1px #fff;
+  background: #aeaeae;
+}
+  </style>
+    <div class="wrapper">
+  <div class="control">
+    <div class="gauge">
+      hi
+    </div>
+  </div>
+</div>
 
-  // Register our new element
-  var ImgSlider = document.registerElement('canvas-container', {
-    prototype: ImgSliderProto
-  });
-</script>
-  
-<canvas-container>
-  
-  </canvas-container>
+</template>
+  </polymer-element>
 
-hi3
+
+
+
+
+
+<gauge>
+
+</gauge>
+
+hi
+
