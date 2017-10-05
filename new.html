@@ -4,7 +4,7 @@
 
   <template>
     <!-- bind to the "owner" property -->
-    <label>[[owner]]</label>
+    <label>[[ni-label]]</label>
     hi
   </template>
 
@@ -14,7 +14,7 @@
       // configure owner property
       static get properties() {
         return {
-          owner: {
+          ni-label: {
             type: String,
             value: "Daniel",
           }
