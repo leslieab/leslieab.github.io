@@ -3,36 +3,32 @@
 <link rel="import" href="https://leslieab.github.io/theme.html">
 
 
-<dom-module id="x-button">
+<dom-module id="ni-button">
   
   <template>
-    <style include="theme">
+   <!-- <style include="theme">
     </style>
     
-    <label class="">[[labeltext]]</label>
+    <label class="">[[labeltext]]</label>-->
     <button class="control">[[buttontext]]</button>
 
   </template>
 
   <script>
-    class XButton extends Polymer.Element {
-      static get is() { return "x-button"; }
+    class NIButton extends Polymer.Element {
+      static get is() { return "ni-button"; }
       static get properties() {
         return {
           buttontext: {
             type: String,
             value: "Daniel",
-          },
-           labeltext: {
-            type: String,
-            value: "Scott",
           }
         };
       }
     }
-    customElements.define(XButton.is, XButton);
+    customElements.define(NIButton.is, NIButton);
   </script>
   
 </dom-module>
 
-<x-button labeltext="Label" buttontext="Button"></x-button>
+<!--<ni-button labeltext="Label" buttontext="Button"></ni-button>-->
