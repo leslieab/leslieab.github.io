@@ -4,7 +4,7 @@
 
   <template>
     <!-- bind to the "owner" property -->
-    This is <b>[[owner]]</b>'s name-tag element.
+    This is <b>[[ni-label]]</b>'s name-tag element.
   </template>
 
   <script>
@@ -13,7 +13,7 @@
       // configure owner property
       static get properties() {
         return {
-          owner: {
+          ni-label: {
             type: String,
             value: "Daniel",
           }
