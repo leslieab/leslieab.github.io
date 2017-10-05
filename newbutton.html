@@ -1,1 +1,27 @@
-test
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+<link rel="import"  href="https://leslieab.github.io/new.html">
+
+<dom-module id="x-button">
+  
+  <template>
+    <style>
+
+    </style>
+
+    <button>x</button>
+
+  </template>
+
+  <script>
+    class XButton extends Polymer.Element {
+      static get is() { return "x-button"; }
+      static get properties() {
+        return {
+          
+        };
+      }
+    }
+    customElements.define(XButton.is, XButton);
+  </script>
+  
+</dom-module>
