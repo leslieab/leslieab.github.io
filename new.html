@@ -1,26 +1,26 @@
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
-<dom-module id="x-label">
+<dom-module id="configurable-name-tag">
 
   <template>
     <!-- bind to the "owner" property -->
-    This is <b>[[ni-label]]</b>'s name-tag element.
+    This is <b>[[owner]]</b>'s name-tag element.
   </template>
 
   <script>
-    class xlabel extends Polymer.Element {
-      static get is() { return "x-label"; }
+    class ConfigurableNameTag extends Polymer.Element {
+      static get is() { return "configurable-name-tag"; }
       // configure owner property
       static get properties() {
         return {
-          ni-label: {
+          owner: {
             type: String,
             value: "Daniel",
           }
         };
       }
     }
-    customElements.define(xlabel.is, xlabel);
+    customElements.define(ConfigurableNameTag.is, ConfigurableNameTag);
   </script>
 
 </dom-module>
