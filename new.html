@@ -1,35 +1,26 @@
-<script src="https://www.polymer-project.org/components/webcomponentsjs/webcomponents.js"></script>
-<link rel="import" href="https://docs-05-dot-polymer-project.appspot.com/0.5/components/core-ajax/core-ajax.html">
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
-<polymer-element name="x-button" noscript>
-  <link rel="import" type="css" href="https://leslieab.github.io/new.css">
-  <!--https://www.polymer-project.org/1.0/docs/devguide/styling#style-modules-->
+<dom-module id="x-label">
+
   <template>
-  <style>
+    <!-- bind to the "owner" property -->
+    This is <b>[[ni-label]]</b>'s name-tag element.
+  </template>
 
-label {
-  border: 1px solid blue;
-}
+  <script>
+    class xlabel extends Polymer.Element {
+      static get is() { return "x-label"; }
+      // configure owner property
+      static get properties() {
+        return {
+          ni-label: {
+            type: String,
+            value: "Daniel",
+          }
+        };
+      }
+    }
+    customElements.define(xlabel.is, xlabel);
+  </script>
 
-.control {
-  border: 1px solid red;
-  padding: 0.25em;
-}
-
-    
-  </style>
-    <label>Label</label>
-      <div class="control">
-        <button>Button 2</button>
-      </div>
-
-</template>
-  </polymer-element>
-
-
-
-
-
-<x-button>
-
-</x-button>
+</dom-module>
