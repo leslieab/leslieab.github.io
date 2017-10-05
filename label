@@ -1,0 +1,27 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+
+<dom-module id="ni-label">
+  <template>
+    <style>
+    </style>
+
+    <label>[[nilabel]]</label>
+
+  </template>
+
+  <script>
+    class NILabel extends Polymer.Element {
+      static get is() { return "ni-label"; }
+      static get properties() {
+        return {
+          nilabel: {
+            type: String,
+            value: "Daniel",
+          }
+        };
+      }
+    }
+    customElements.define(NILabel.is, NILabel);
+  </script>
+
+</dom-module>
