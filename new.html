@@ -1,22 +1,21 @@
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
-<dom-module id="configurable-name-tag">
+<dom-module id="x-label">
 
   <template>
     <style>
       :host {
-        --configurable-name-tag-color: red;
+        --x-label-color: red;
       };
     </style>
-    <!-- bind to the "owner" property -->
+
     <label>[[nilabel]]</label>
 
   </template>
 
   <script>
     class ConfigurableNameTag extends Polymer.Element {
-      static get is() { return "configurable-name-tag"; }
-      // configure owner property
+      static get is() { return "x-label"; }
       static get properties() {
         return {
           nilabel: {
