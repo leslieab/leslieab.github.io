@@ -8,7 +8,7 @@
 
     </style>
 
-    <button>x</button>
+    <button>[[buttontext]]</button>
 
   </template>
 
@@ -17,7 +17,10 @@
       static get is() { return "x-button"; }
       static get properties() {
         return {
-          
+          buttontext: {
+            type: String,
+            value: "Daniel",
+          }
         };
       }
     }
