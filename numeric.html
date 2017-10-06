@@ -32,7 +32,22 @@
       static get is() { return "ni-numeric"; }
       static get properties() {
         return {
-          
+          value: {
+            type: Number,
+            value: 0,
+          },
+          buttons: {
+            type: Boolean,
+            value: true,
+          },
+          radix: {
+            type: Boolean,
+            value: true,
+          },
+          unit: {
+            type: Boolean,
+            value: true,
+          },
         };
       }
     }
