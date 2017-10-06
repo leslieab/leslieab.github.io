@@ -1,0 +1,34 @@
+<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+<link rel="import" href="https://leslieab.github.io/base.html">
+<link rel="import" href="https://leslieab.github.io/theme.html">
+
+<dom-module id="ni-numeric">
+  <template>
+    
+    <style include="base"></style>
+    <style include="theme"></style>
+    
+    <input type="text" class="">
+    <div>
+    <button>up</button>
+    
+    <button>down</button>
+    </div>
+    
+    
+  </template>
+
+  <script>
+    class NINumeric extends Polymer.Element {
+      static get is() { return "ni-numeric"; }
+      static get properties() {
+        return {
+          
+        };
+      }
+    }
+    customElements.define(NINumeric.is, NINumeric);
+  </script> 
+</dom-module>
+
+<ni-numeric></ni-numeric>
