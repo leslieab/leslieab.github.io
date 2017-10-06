@@ -1,6 +1,25 @@
 <dom-module id="theme">
   <template>
     <style>
+      :root {
+  --font-family: "helvetica", sans-serif;
+  --font-size: 16px;
+  
+  --color-transparent: transparent;
+  --color-white: #fff;
+  --color-black: #000;
+  
+  --style-popcolor: #00ADEF;
+  --style-color1: rgba(0, 0, 0, .35);
+  
+  --style-outline-width: 2px;
+  --style-outline-style: solid;
+  --style-outline-offset: 1px;
+  --style-outline-total: calc(var(--style-outline-width) + var(--style-outline-offset));
+  
+  --style-outline: var(--style-outline-width) var(--style-outline-style) var(--style-color1);
+}
+      
       button {
         background-color: var(--style-color1);
         outline-width: var(--style-outline-width);
