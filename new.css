@@ -16,6 +16,10 @@
         --style-outline: var(--style-outline-width) var(--style-outline-style) var(--style-color1);
       }
 
+body {
+        background: pink;
+}
+
 ni-button {
         width: 112px;
         height: 48px;
