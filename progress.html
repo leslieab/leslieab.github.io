@@ -1,15 +1,16 @@
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 <link rel="import" href="https://leslieab.github.io/base.html">
-<link rel="import" href="https://leslieab.github.io/theme.html">
-<link rel="import" href="https://leslieab.github.io/colors.html">
+<link rel="stylesheet" href="https://leslieab.github.io/new.css" type="text/css">
+
 
 <dom-module id="ni-progress">
   <template>
     <style include="base"></style>
-    <style include="theme"></style>
-    <style include="colors"></style>
     
-    <div class="bar"></div>
+    <div class="bar">
+      <div class="value"></div>
+      <div class="label"></div>
+    </div>
   </template>
 
   <script>
@@ -24,3 +25,5 @@
     customElements.define(NIProgress.is, NIProgress);
   </script> 
 </dom-module>
+
+<ni-progress class="control"></ni-progress>
