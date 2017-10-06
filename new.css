@@ -31,3 +31,7 @@ ni-string {
         height: 32px;
 }
 
+ni-progress {
+        width: 160px;
+        height: 32px;
+}
