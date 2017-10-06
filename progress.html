@@ -9,7 +9,7 @@
     
     <div class="bar">
       <div class="value"></div>
-      <div class="label">50%</div>
+      <div class="label">[[value]]</div>
     </div>
   </template>
 
@@ -18,7 +18,10 @@
       static get is() { return "ni-progress"; }
       static get properties() {
         return {
-        
+          value: {
+            type: String,
+            value: "0",
+          }
         };
       }
     }
@@ -26,4 +29,4 @@
   </script> 
 </dom-module>
 
-<ni-progress class="control"></ni-progress>
+<ni-progress value="50" class="control"></ni-progress>
