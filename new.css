@@ -14,17 +14,9 @@ body {
         font-style: normal;
       }
 
-button {
-        background-color: #fff;
-        border-color: red;
-      }
-
-button:hover {
-        background-color: orange;
-};
-      
-button:active {
-        border-color: orange;
+ni-button {
+        display: inline-block;
+        width: 112px;
+        height: 48px;
 }
-
 
