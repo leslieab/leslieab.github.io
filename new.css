@@ -21,6 +21,7 @@ body {
 }
 
 ni-button {
+        display: inline-block;
         width: 112px;
         height: 48px;
 }
