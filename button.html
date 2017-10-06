@@ -1,5 +1,14 @@
 <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
 
+class NIButton extends Polymer.Element {
+static get template() {
+return '<button>hi</button>'
+  }
+}
+customElements.define('ni-button', NIButton);
+
+<!--
+
 <dom-module id="ni-button">
   <template>   
     <button>[[buttontext]]</button>
@@ -19,6 +28,6 @@
     }
     customElements.define(NIButton.is, NIButton);
   </script> 
-</dom-module>
+</dom-module>-->
 
-<ni-button buttontext="Button"></ni-button>
+<ni-button></ni-button>
