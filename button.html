@@ -4,7 +4,7 @@
   <script>
     class NIButton extends Polymer.Element {
       static get template() {
-        return '<button>' + [[buttontext]] + '</button>'
+        return '<button><slot></slot></button>'
       }
       static get properties() {
         return {
