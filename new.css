@@ -16,7 +16,7 @@
         --style-outline: var(--style-outline-width) var(--style-outline-style) var(--style-color1);
       }
 
-ni-button {
+ni-button > button {
         width: 112px;
         height: 48px;
 }
