@@ -17,12 +17,17 @@ body {
 }
 
 .control {
+        display: inline-block;
         padding: 0.25em;
 }
 
 ni-button {
-        display: inline-block;
         width: 112px;
         height: 48px;
+}
+
+ni-string {
+        width: 160px;
+        height: 32px;
 }
 
