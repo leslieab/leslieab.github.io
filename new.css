@@ -5,14 +5,16 @@ body {
         color: #000;
 }
 
-
-
 @font-face {
         font-family: "jqx-icons";
         src: url("https://leslieab.github.io/jqx-icons.ttf") format("truetype");
         font-weight: normal;
         font-style: normal;
-      }
+}
+
+.control {
+        padding: 0.25em;
+}
 
 ni-button {
         display: inline-block;
