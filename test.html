@@ -1,30 +1,9 @@
-<link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
-
-<dom-module id="dom-element">
-
-  <template>
-    <p>I'm a DOM element. This is my shadow DOM!</p>
-    <!--
-    TODO: Try adding some other html elements inside the <template></template> block. For example, add <h1>A heading!</h1> or <a href=”stuff.html”>A link!</a>
-    --> 
-  </template>
-
-  <script>
-    // Define the class for a new element called custom-element
-  class CustomElement extends Polymer.Element {
-    static get is() { return "custom-element"; }
-    constructor() {
-        super();
-        this.textContent = "I'm a custom-element.";
-      }
-  }
-  // Register the new element with the browser
-  customElements.define(CustomElement.is, CustomElement);
-    
-    class DomElement extends Polymer.Element {
-      static get is() { return "dom-element"; }
-    }
-    customElements.define(DomElement.is, DomElement);
-  </script>
-
-</dom-module>
+<html>
+  <head>
+    <link rel="import" href="https://leslieab.github.io/button.html">
+    <link rel="stylesheet" href="https://leslieab.github.io/new.css" type="text/css">
+  </head>
+  <body>
+    <ni-button buttontext="Button"></ni-button>
+  </body>
+</html>
