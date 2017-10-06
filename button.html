@@ -4,9 +4,16 @@
   <script>
     class NIButton extends Polymer.Element {
       static get template() {
-        return '<button>hi</button>'
+        return '<button>' + [[buttontext]] + '</button>'
       }
-    }
+      static get properties() {
+        return {
+          buttontext: {
+            type: String,
+            value: "Button",
+          }
+        };
+      }
     customElements.define('ni-button', NIButton);
   </script>
 </dom-module>
@@ -25,7 +32,7 @@
         return {
           buttontext: {
             type: String,
-            value: "",
+            value: "Button",
           }
         };
       }
