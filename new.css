@@ -16,28 +16,9 @@ body {
         font-style: normal;
 }
 
-.control {
+/* LAYOUT */
+
+.layout {
         display: flex;
-        padding: 0.25em;
-}
-
-/*ni-button {
-        width: 112px;
-        height: 48px;
-}*/
-
-ni-string {
-        width: 160px;
-        height: 32px;
-}
-
-ni-progress {
-        width: 224px;
-        height: 32px;
-}
-
-ni-numeric {
-        width: 160px;
-        height: 32px;
-        background: red;
+        align-items: flex-start;
 }
