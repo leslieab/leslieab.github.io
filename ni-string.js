@@ -1,6 +1,6 @@
-const template = document.createElement('template');
+const stringTemplate = document.createElement('template');
 
-template.innerHTML = `
+stringTemplate.innerHTML = `
   <div class='container input'>
     <textarea class='field'></textarea>
   </div>
