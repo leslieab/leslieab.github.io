@@ -11,7 +11,7 @@ class NIString extends HTMLElement {
     super();
     
     this.userType = this.userType.bind(this);
-    this.appendChild(buttonTemplate.content.cloneNode(true));
+    this.appendChild(stringTemplate.content.cloneNode(true));
     
     this.container = this.querySelector('.container');
     this.field = this.querySelector('.field');
