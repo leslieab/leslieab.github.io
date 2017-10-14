@@ -63,7 +63,3 @@ class NIString extends HTMLElement {
 }
 
 customElements.define('ni-string', NIString);
-
-this.addEventListener("keypress", function(){
-  
-});
