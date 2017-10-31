@@ -1,8 +1,6 @@
 /* STRING */ 
 
 (function() {
-  import {label} from 'https://leslieab.github.io/label.js';
-
   class NIString extends HTMLElement {
     constructor() {
       super();
