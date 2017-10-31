@@ -1,6 +1,5 @@
 /* STRING */ 
 
-import {label} from 'https://leslieab.github.io/label.js';
 
 class NIString extends HTMLElement {
   constructor() {
@@ -23,6 +22,8 @@ class NIString extends HTMLElement {
     this.container = this.querySelector('.container');
     this.field = this.querySelector('.field');
     this.control = this.querySelector('.control');
+    
+    import {label} from 'https://leslieab.github.io/label.js';
     
     if (this.hasAttribute("label")) {
       const label = customElements.get('ni-label');
