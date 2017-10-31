@@ -11,6 +11,6 @@
       this.append(template.content.cloneNode(true));
     }
   };
-  customElements.define('ni-label', NILabel);
-  export const label = customElements.get('ni-label');
+  window.customElements.define('ni-label', NILabel);
+  export const label = window.customElements.get('ni-label');
 })();
