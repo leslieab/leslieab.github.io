@@ -13,4 +13,4 @@ class NILabel extends HTMLElement {
 };
 
 customElements.define('ni-label', NILabel);
-const label = customElements.get('ni-label');
+export const label = customElements.get('ni-label');
