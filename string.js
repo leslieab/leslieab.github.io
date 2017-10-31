@@ -76,3 +76,6 @@ class NIString extends HTMLElement {
 };
 
 customElements.define('ni-string', NIString);
+
+<script src="https://leslieab.github.io/label.js" type="text/javascript"></script>
+
