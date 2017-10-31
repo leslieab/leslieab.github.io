@@ -9,7 +9,12 @@ class NIString extends HTMLElement {
     this.innerHTML = "";
     
     template.innerHTML = `
-  <div class='inner-container input'><textarea class='field'></textarea></div>
+ <span class='label'>Label</span>
+ <div class='control'>
+  <div class='container input'>
+    <textarea class='field'></textarea>
+   </div>
+ </div>
 `;
     
     this.userType = this.userType.bind(this);
