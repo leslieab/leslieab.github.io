@@ -1,26 +1,31 @@
-const stringTemplate = document.createElement('template');
-
-stringTemplate.innerHTML = `
-  <div class='container input'>
-    <textarea class='field'></textarea>
-  </div>
-`;
-
 class NIString extends HTMLElement {
   constructor() {
     super();
     
-    this.userType = this.userType.bind(this);
-    this.appendChild(stringTemplate.content.cloneNode(true));
+    const template = document
+    .createElement('template');
     
-    this.container = this.querySelector('.container');
+    var content = this.innerHTML;
+    this.innerHTML = "";
+    
+    template.innerHTML = `
+  <div class='inner-container input'><textarea class='field'></textarea></div>
+`;
+    
+    this.userType = this.userType.bind(this);
+    this.append(template.content.cloneNode(true));
+    
+    this.container = this
+      .querySelector('.inner-container');
     this.field = this.querySelector('.field');
   }
   connectedCallback() {
-    this.field.addEventListener('change', this.userType);
+    this.field
+      .addEventListener('change', this.userType);
     
     if (this.hasAttribute("wrap", "off")) {
-      this.field.addEventListener("keydown", this.returnKey);
+      this.field
+        .addEventListener("keydown", this.returnKey);
     }
   }
   userType() {
@@ -51,15 +56,9 @@ class NIString extends HTMLElement {
   set text(v) {
     this.setAttribute("text", v);
   }
-  get placeholder() {
-    return this.newPlace;
-  }
-  set placeholder(v) {
-    this.setAttribute("placeholder", v);
-  }
   disconnectedCallback() {
     this.field.removeEventListener('change', this.userType);
   }
-}
+};
 
 customElements.define('ni-string', NIString);
