@@ -76,6 +76,5 @@
       this.field.removeEventListener('keydown', this.returnKey);
     }
   };
-  
-  customElements.define('ni-string', NIString);
+  window.customElements.define('ni-string', NIString);
 })();
