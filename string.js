@@ -1,4 +1,4 @@
-/* STRING */
+/* STRING */ 
 
 class NIString extends HTMLElement {
   constructor() {
