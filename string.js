@@ -9,7 +9,7 @@
       
       template.innerHTML = `
         <div class='control'>
-          <div class='container input'>
+          <div class='inner-container input'>
             <textarea class='field'></textarea>
           </div>
         </div>
@@ -18,7 +18,7 @@
       this.userType = this.userType.bind(this);
       this.append(template.content.cloneNode(true));
 
-      this.container = this.querySelector('.container');
+      this.container = this.querySelector('.inner-container');
       this.field = this.querySelector('.field');
       this.control = this.querySelector('.control');
       
