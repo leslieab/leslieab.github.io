@@ -21,6 +21,7 @@ body {
 
 .control {
   display: flex;
+  
   position: relative;
   padding: 0.25em;
 }
