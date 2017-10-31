@@ -17,9 +17,11 @@ body {
         font-style: normal;
 }
 
-/* LAYOUT */
+/* CONTROL */
 
-.layout {
-        display: flex;
-        align-items: flex-start;
+.control {
+  display: flex;
+  position: relative;
+  padding: 0.25em;
 }
+
