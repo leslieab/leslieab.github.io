@@ -1,3 +1,5 @@
+<script src="https://leslieab.github.io/label.js" type="text/javascript"></script>
+
 /* STRING */ 
 
 class NIString extends HTMLElement {
