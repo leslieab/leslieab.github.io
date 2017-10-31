@@ -1,3 +1,5 @@
+/* STRING */
+
 class NIString extends HTMLElement {
   constructor() {
     super();
@@ -5,32 +7,35 @@ class NIString extends HTMLElement {
     const template = document
     .createElement('template');
     
-    var content = this.innerHTML;
-    this.innerHTML = "";
-    
     template.innerHTML = `
- <span class='label'>Label</span>
- <div class='control'>
-  <div class='container input'>
-    <textarea class='field'></textarea>
-   </div>
- </div>
+  <div class='control'>
+    <div class='container input'>
+      <textarea class='field'></textarea>
+    </div>
+  </div>
 `;
     
     this.userType = this.userType.bind(this);
     this.append(template.content.cloneNode(true));
-    
-    this.container = this
-      .querySelector('.inner-container');
+
+    this.container = this.querySelector('.container');
     this.field = this.querySelector('.field');
+    this.control = this.querySelector('.control');
+    
+    if (this.hasAttribute("label")) {
+      const label = customElements.get('ni-label');
+      var newLabel = new label();
+      this.insertBefore(newLabel, this.control);
+    }
+    
+    this.label = this.querySelector('.label'); 
   }
   connectedCallback() {
     this.field
       .addEventListener('change', this.userType);
     
-    if (this.hasAttribute("wrap", "off")) {
-      this.field
-        .addEventListener("keydown", this.returnKey);
+    if (this.hasAttribute('wrap', 'off')) {
+      this.field.addEventListener('keydown', this.returnKey);
     }
   }
   userType() {
@@ -43,23 +48,27 @@ class NIString extends HTMLElement {
     } 
   }
   static get observedAttributes() {
-    return ['text', 'placeholder'];
+    return ['value', 'placeholder', 'label'];
   }
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'text') {
+    if (name === 'value') {
       this.newText = newValue;
       this.field.value = newValue;
     };
     
     if (name === 'placeholder') {
-      this.field.setAttribute("placeholder", newValue);
+      this.field.setAttribute('placeholder', newValue);
+    };
+    
+    if (name === 'label') {
+      this.label.textContent = newValue;
     };
   }
   get text() {
     return this.newText;
   }
   set text(v) {
-    this.setAttribute("text", v);
+    this.setAttribute('value', v);
   }
   disconnectedCallback() {
     this.field.removeEventListener('change', this.userType);
