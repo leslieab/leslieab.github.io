@@ -25,3 +25,12 @@ body {
   padding: 0.25em;
 }
 
+.label {
+  flex-shrink: 0;
+  padding: 0 0.25em 0 0.25em;
+  max-width: 30ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
