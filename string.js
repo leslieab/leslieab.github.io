@@ -45,7 +45,7 @@ class NIString extends HTMLElement {
     } 
   }
   static get observedAttributes() {
-    return ['value', 'placeholder', 'label'];
+    return ['value', 'placeholder', 'label', 'indicator'];
   }
   attributeChangedCallback(name, oldValue, newValue) {
     if (name === 'value') {
@@ -60,6 +60,11 @@ class NIString extends HTMLElement {
     if (name === 'label') {
       this.label.textContent = newValue;
     };
+    
+    if (name === 'indicator') {
+      this.field.setAttribute('readonly', '');
+    };
+    
   }
   get text() {
     return this.newText;
