@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 .inner-container {
   display: flex;
   width: 100%;
@@ -33,11 +35,19 @@
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
+/* STRING */
+
 ni-string[wrap="off"] .field {
   white-space: nowrap;
   overflow-x: hidden;
 }
 
-.hidden {
-  display: none;
+ni-string[readonly] .input {
+  border: var(--indicatorBorder);
 }
+
+
