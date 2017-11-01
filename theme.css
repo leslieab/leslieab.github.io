@@ -1,13 +1,15 @@
 :root {
   --popColor: #ffbb00;
-  --borderColor: #000;
-  --borderWidth: 2px;
-  --borderStyle: solid;
-  --border: var(--borderWidth) var(--borderStyle) var(--borderColor);
+  --controlBorderColor: #000;
+  --controlBorderWidth: 2px;
+  --controlBorderStyle: solid;
+  --controlBorder: var(--controlBorderWidth) var(--controlBorderStyle) var(--controlBorderColor);
+  --indicatorBorderColor: rgba(0, 0, 0, .35);
+  --indicatorBorder: var(--controlBorderWidth) var(--controlBorderStyle) var(--indicatorBorderColor);
 }
 
 .input {
-  border: var(--border);
+  border: var(--controlBorder);
 }
 
 .input:hover {
@@ -16,4 +18,8 @@
 
 .field::selection {
   background-color: var(--popColor); 
+}
+
+:read-only > .input {
+  border: var(--indicatorBorder);
 }
