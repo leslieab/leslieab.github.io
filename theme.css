@@ -1,3 +1,5 @@
+/* VARS */
+
 :root {
   --popColor: #ffbb00;
   --controlBorderColor: #000;
@@ -7,6 +9,8 @@
   --indicatorBorderColor: rgba(0, 0, 0, .35);
   --indicatorBorder: var(--controlBorderWidth) var(--controlBorderStyle) var(--indicatorBorderColor);
 }
+
+/* GLOBAL */
 
 .input {
   border: var(--controlBorder);
@@ -20,3 +24,12 @@
   background-color: var(--popColor); 
 }
 
+/* STRING */
+
+ni-string[readonly] .input {
+  border: var(--indicatorBorder);
+}
+
+ni-string[readonly] .input:hover {
+  border-color: var(--popColor);
+}
