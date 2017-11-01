@@ -20,6 +20,6 @@
   background-color: var(--popColor); 
 }
 
-:read-only .input {
+:read-only.input {
   border: var(--indicatorBorder);
 }
