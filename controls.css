@@ -41,7 +41,7 @@
 
 /* STRING */
 
-ni-string[wrap="off"] .field {
+ni-string[wrap] .field {
   white-space: nowrap;
   overflow-x: hidden;
 }
