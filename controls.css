@@ -6,15 +6,13 @@
 
 .input {
   width: 100%;
-  border-color: #000;
-  border-width: 1px;
-  border-style: solid;
   outline: 0;
   font: inherit;
+  border: 1px solid #000;
 }
 
 .input:hover {
-  border-color: orange;
+  border-color: #427fea;
 }
 
 .field {
@@ -29,7 +27,7 @@
 }
 
 .field::selection {
-  background-color: orange; 
+  background-color: #427fea; 
 }
 
 .text {
