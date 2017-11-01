@@ -5,3 +5,15 @@
   --borderStyle: solid;
   --border: var(--borderWidth) var(--borderStyle) var(--borderColor);
 }
+
+.input {
+  border: var(--border);
+}
+
+.input:hover {
+  border-color: var(--popColor);
+}
+
+.field::selection {
+  background-color: var(--popColor); 
+}
