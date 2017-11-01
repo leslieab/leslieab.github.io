@@ -1,0 +1,7 @@
+:root {
+  --popColor: #ffbb00;
+  --borderColor: #000;
+  --borderWidth: 2px;
+  --borderStyle: solid;
+  --border: var(--borderWidth) var(--borderStyle) var(--borderColor);
+}
