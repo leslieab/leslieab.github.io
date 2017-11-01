@@ -1,27 +1,28 @@
 * {
-        box-sizing: border-box;
-         -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+  /* needs follow up on auto vs 100% */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-        font-family: "helvetica", sans-serif;
-        font-size: 16px;
-        line-height: 16px;
-        color: #000;
+  font-family: var(--bodyFontFamily);
+  font-size: var(--bodyFontSize);
+  line-height: var(--bodyFontSize);
+  color: var(--bodyFontColor);
+  background-color: var(--panelBackgroundColor);
 }
 
 @font-face {
-        font-family: "jqx-icons";
-        src: url("https://leslieab.github.io/jqx-icons.ttf") format("truetype");
-        font-weight: normal;
-        font-style: normal;
+  font-family: "jqx-icons";
+  src: url("https://leslieab.github.io/jqx-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* CONTROL */
 
 .control {
   display: flex;
-  
   position: relative;
   padding: 0.25em;
 }
