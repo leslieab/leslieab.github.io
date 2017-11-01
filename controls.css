@@ -40,3 +40,7 @@ ni-string[wrap="off"] .field {
   white-space: nowrap;
   overflow-x: hidden;
 }
+
+.hidden {
+  display: none;
+}
