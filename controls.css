@@ -47,7 +47,11 @@ ni-string[wrap="off"] .field {
 }
 
 ni-string[readonly] .input {
-  border: var(--indicatorBorder);
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+ni-string[readonly] .input:hover {
+  border-color: #427fea;
 }
 
 
