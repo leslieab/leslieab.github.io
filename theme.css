@@ -1,6 +1,12 @@
 /* VARS */
 
 :root {
+  --panelBackgroundColor: transparent;
+    
+  --bodyFontFamily: "helvetica", sans-serif;
+  --bodyFontSize: 16px;
+  --bodyFontColor: #000;
+  
   --popColor: #ffbb00;
   --controlBorderColor: #000;
   --controlBorderWidth: 2px;
