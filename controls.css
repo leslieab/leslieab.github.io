@@ -49,14 +49,9 @@ textarea:disabled {
 
 /* STRING */
 
-ni-string .field {
+ni-string[no-wrap] .field {
   white-space: nowrap;
   overflow-x: hidden;
-}
-
-ni-string[wrap] .field {
-  white-space: normal;
-  overflow-x: scroll;
 }
 
 ni-string[readonly] .input {
