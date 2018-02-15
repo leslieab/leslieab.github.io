@@ -46,8 +46,13 @@
         right: 32px;
       }
       #gauge-1 {
+	 width: 45%;     
       }
-      
+      #gauge-1:before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+      }
 
       .width {
     width: 45%;
@@ -62,6 +67,7 @@
 .width:before {
     content: '';
     display: block;
+   
 }
 .ratio1-1:before {padding-top: 100%;}
 .ratio2-1:before {padding-top: 50%;}
