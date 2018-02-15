@@ -15,60 +15,27 @@
         align-content: center;
         justify-content: center;
       }
-      .graph {
-        width: 30%;
-        height: 30%;
+      #graph-1 {
+        width: 40vw;
+        height: 30vh;
         top: 32px;
-        left: 35%;
       }
-      .numeric {
-        width: 112px;
-        height: 48px;
-      }
-      .led {
-        width: 48px;
-        height: 48px;
-        top: 35%;
-        left: calc(35% + 112px + 32px + 112px + 32px);
-      }
-      .button {
-        width: 120px;
-        height: 56px;
-        bottom: 32px;
-        right: 32px;
-      }
-      #control-2 {
-        top: 35%;
-        left: 35%;
-      }
-      #control-3 {
-        top: 35%;
-        left: calc(35% + 112px + 32px);
-      }
-      #control-4 {
-       
-      }
-      @media only screen and (max-width : 640px) {
-        body {
-          background-color: rgba(255, 0, 194, 0.1);
-        }
-      }
+     
     </style>
   </head>
   <body>
-    <div class="control graph">
+    <div class="control" id="graph-1">
       Graph
     </div>
-    <div class="control numeric" id="control-2">
+    <div class="control" id="numeric-1">
       Numeric
     </div>
-    <div class="control numeric" id="control-3">
+    <div class="control" id="numeric-2">
       Numeric
     </div>
-     <div class="control led">
+     <div class="control" id="led">
       LED
     </div>
-    
     <div class="control button">
       stop
     </div>
