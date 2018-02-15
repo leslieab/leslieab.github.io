@@ -46,7 +46,9 @@
         right: 32px;
       }
       #gauge-1 {
-	 width: 10vw;     
+	 width: 10vw;
+	 left: 30%;
+	 top: 45%;
       }
       #gauge-1:before {
 	content: '';
@@ -54,33 +56,6 @@
 	padding-top: 100%;
       }
 
-      .width {
-    width: 45%;
-    background: #F9D237;
-    position: relative;
-    display: inline-block;
-	      position: absolute;
-	      bottom: 32px;
-    margin: 1%;
-    vertical-align: top;
-    box-shadow: 0 0 4px rgba(0,0,0,.3);
-}
-.width:before {
-    content: '';
-    display: block;
-   
-}
-.ratio1-1:before {padding-top: 100%;}
-.ratio2-1:before {padding-top: 50%;}
-.ratio4-3:before {padding-top: 75%;}
-.ratio16-9:before {padding-top: 56.25%;}
-.contenido {    
-   position: absolute;
-   top: 0; left: 0; bottom: 0; right: 0;
-   font-size: 1.5rem;
-   color: #444;
-}
-     
     </style>
   </head>
   <body>
@@ -99,9 +74,6 @@
      <div class="control" id="gauge-1">
        gauge
     </div>
-    <div class="width ratio2-1">
-		<div class="contenido">Aspect ratio 2:1</div>
-	</div>
     <div class="control" id="stop-1">
       stop
     </div>
