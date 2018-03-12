@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Task #2</title>
+    	<link href="ni-webvi-resource-v0/favicon.ico" type="image/x-icon" rel="icon">
+
+    	<link href="ni-webvi-resource-v0/Web/dist/Styles/new.css" type="text/css" rel="stylesheet">
+    	<!--<link href="ni-webvi-resource-v0/Web/dist/Styles/niBase.DeployedRun.Absolute.min.css" type="text/css" rel="stylesheet">-->
+
+
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niBase.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niThirdPartyResources.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niElements.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/node_modules/ni-webcharts/dist/webcharts.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/node_modules/ni-webcharts-legends/dist/webcharts-legends.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niModelsAndViewModels.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/node_modules/vireo/dist/asmjs-unknown-emscripten/release/vireo.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niVireoModules.min.js" type="text/javascript"></script>
+    	<script defer="" src="ni-webvi-resource-v0/Web/dist/niRegistration.min.js" type="text/javascript"></script>
+
+    	<style>
+    	#container-1 {
+    		--direction: column;
+    		--main: top;
+    		--cross: center;
+    	}
+
+    	#container-2 {
+    		--main: center;
+    	}
+
+    	#container-3 {
+    		--main: center;
+    	}
+
+    	#component-1 {
+			width: 80%;
+			min-width: min-content;
+			max-width: 100%;
+		}
+
+		#component-1 > ni-cartesian-graph {
+    		width: 100%!important;
+    	}
+
+
+    	
+
+    	</style>
+
+	</head>
+	<body>
+		<ni-web-application engine="VIREO" location="BROWSER" vireo-source="Main.via.txt">
+			<ni-virtual-instrument vi-name=":Web Server:Interactive:WebApp:Main.gviweb"></ni-virtual-instrument>
+		</ni-web-application>
+
+		<div class="ni-front-panel-wrapper">
+			<section id="FrontPanelCanvas" class="ni-front-panel">
+				<div class="group">
+					<div class="wrapper">
+						<div class="container" id="container-1">
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='1' binding-info='{}' label-id='' text='Slider'></ni-label>
+
+								<jqx-slider data-ni-base-style="uninitialized" ni-control-id='2' binding-info='{"prop":"value","dco":0,"dataItem":"dataItem_Slider","unplacedOrDisabled":true,"accessMode":"readOnly","isLatched":false,"sync":false}' label-id='177' value='0' min='0' max='10' interval='1' scale-type='floatingPoint' scale-visible='true' ticks-visibility='minor' labels-visibility='all' format='decimal' significant-digits='6' scale-position='far' orientation='horizontal' mechanical-action='switchWhileDragging' show-tooltip='true'></jqx-slider>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='3' binding-info='{}' label-id='' text='Slider 2'></ni-label>
+
+								<jqx-slider data-ni-base-style="uninitialized" ni-control-id='4' binding-info='{"prop":"value","dco":0,"dataItem":"dataItem_Slider","unplacedOrDisabled":true,"accessMode":"readOnly","isLatched":false,"sync":false}' label-id='177' value='0' min='0' max='10' interval='1' scale-type='floatingPoint' scale-visible='true' ticks-visibility='minor' labels-visibility='all' format='decimal' significant-digits='6' scale-position='far' orientation='horizontal' mechanical-action='switchWhileDragging' show-tooltip='true'></jqx-slider>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper">
+						<div class="container" id="container-2">
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='5' binding-info='{}' label-id='' text='Numeric'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='6' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='7' binding-info='{}' label-id='' text='Numeric 2'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='8' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='9' binding-info='{}' label-id='' text='Numeric 3'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='10' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='11' binding-info='{}' label-id='' text='Numeric 4'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='12' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='13' binding-info='{}' label-id='' text='Numeric 5'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='14' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='15' binding-info='{}' label-id='' text='Numeric 6'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='16' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+							<div class="component">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='17' binding-info='{}' label-id='' text='Numeric 7'></ni-label>
+
+								<jqx-numeric-text-box data-ni-base-style="uninitialized" ni-control-id='18' binding-info='{"prop":"value","dco":3,"dataItem":"dataItem_Numeric","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='598' readonly='true' value='0' min='-Infinity' max='Infinity' input-format='floatingPoint' spin-buttons-position='right' radix='decimal' significant-digits='6' spin-buttons-step='1' spin-buttons-initial-delay='500'></jqx-numeric-text-box>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="group">
+					<div class="wrapper">
+						<div class="container" id="container-3">
+							<div class="component" id="component-1">
+								<ni-label data-ni-base-style="uninitialized" ni-control-id='19' binding-info='{}' label-id='' text='Graph'></ni-label>
+
+								<ni-cartesian-graph data-ni-base-style="uninitialized" ni-control-id='20' binding-info='{"prop":"value","dco":1,"dataItem":"dataItem_Graph","unplacedOrDisabled":true,"accessMode":"writeOnly","isLatched":false,"sync":false}' label-id='588' read-only='true' ni-type='{"name":"Array","rank":1,"subtype":"Double"}' value='[]' plot-area-margin='{"left":0,"top":0,"right":0,"bottom":0}'>
+									<ni-cartesian-axis data-ni-base-style="uninitialized" label='Time' show='true' show-label='true' ni-control-id='21' axis-position='bottom' minimum='0' maximum='100' format='LVRelativeSeconds:G6&gt;&gt;0.000E+0' show-tick-labels='all' auto-scale='exact' grid-lines='true' show-ticks='true' show-minor-ticks='true'></ni-cartesian-axis>
+									<ni-cartesian-axis data-ni-base-style="uninitialized" label='Amplitude' show='true' show-label='true' ni-control-id='22' axis-position='left' minimum='0' maximum='10' format='LVRelativeSeconds:G6&gt;&gt;0.000E+0' show-tick-labels='all' auto-scale='loose' grid-lines='true' show-ticks='true' show-minor-ticks='true'></ni-cartesian-axis>
+									<ni-cartesian-plot data-ni-base-style="uninitialized" label='Plot' show='true' show-label='true' ni-control-id='23' xaxis='578' yaxis='579' hover-format='{0}, {1}'>
+										<ni-cartesian-plot-renderer data-ni-base-style="uninitialized" ni-control-id='24' line-width='1' line-stroke='rgba(130,163,209,1)' line-style='solid' point-color='' area-fill='' area-base-line='negativeinfinity' bar-fill='' bar-base-line='negativeinfinity' point-size='7.0710678118654755' point-shape='ellipse'></ni-cartesian-plot-renderer>
+									</ni-cartesian-plot>
+								</ni-cartesian-graph>
+							</div>
+
+
+						
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
+
+
