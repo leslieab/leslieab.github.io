@@ -1,17 +1,3 @@
-/* VARS */
-
-:root {
-  --panelBackgroundColor: transparent;
-    
-  --bodyFontFamily: "helvetica", sans-serif;
-  --bodyFontSize: 16px;
-  --bodyFontColor: #000;
-  
-  --popColor: #ffbb00;
-  --controlBorderColor: #000;
-  --controlBorderWidth: 2px;
-  --controlBorderStyle: solid;
-  --controlBorder: var(--controlBorderWidth) var(--controlBorderStyle) var(--controlBorderColor);
-  --indicatorBorderColor: rgba(0, 0, 0, .35);
-  --indicatorBorder: var(--controlBorderWidth) var(--controlBorderStyle) var(--indicatorBorderColor);
+.disabled {
+cursor: default!important;
 }
